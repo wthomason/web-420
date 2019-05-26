@@ -18,16 +18,20 @@ console.log(header.display("William", "Thomason", "api-gateway") + "\n");
  *SETTING VARIABLES
  *require statements
  */
-var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
+var createError = require('http-errors');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var mongoose = require("mongoose");
-var indexRouter = require('./routes/index');
-var apiCatalog = require('./routes/api-catalog');
+var bodyParser = require('body-parser');
+mongoose.Promise = require('bluebird');
+
 //mongoDB connection string
 var mongoDB = "mongodb+srv://admin:admin@api-gateway-tfxw4.mongodb.net/test?retryWrites=true";
+
+var indexRouter = require('./routes/index');
+var apiCatalog = require('./routes/api-catalog');
 
 var app = express();
 
@@ -35,14 +39,18 @@ var app = express();
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
-app.use('/api', apiCatalog);
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(logger('dev'));
+app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+
 
 app.use('/', indexRouter);
+app.use('/api', apiCatalog);
 
 
 /*
