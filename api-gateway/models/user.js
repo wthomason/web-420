@@ -33,4 +33,7 @@ module.exports.getById = (id, callback) => {
   User.findById(query, callback);
 };
 
-
+module.exports.getOne = (e, callback) => {
+  var query = {email: e};
+  User.findOne(query, callback);
+};
