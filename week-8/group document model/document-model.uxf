@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>650</x>
+      <y>650</y>
+      <w>270</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>titles
+--
+id: Long="36548",
+video_title: 'Terminator 2',
+director: 'James Cameron',
+cast_members: ['Arnold Schwarzenegger',
+'Edward Furlong', 'Linda Hamilton',
+'Robert Patric'],
+duration:'2h 36m' ,
+video_rating: 'R',
+description: 'The best dooms day 
+movie when robots come back 
+for revenge!',
+genre: 'Action',
+reviews_score: 10
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>640</x>
+      <y>500</y>
+      <w>290</w>
+      <h>350</h>
+    </coordinates>
+    <panel_attributes>queue
+--
+id: Long="36548",
+video_queue: 'IT',
+liked_titles: ['Jaws', 'Moana'],
+recomended_titles:'Toy Story 4',
+disliked_titles: ['Gilmore Girls',
+'Grays Anatomy'],
+blocked_titles: 'Spong Bob'
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>640</x>
+      <y>380</y>
+      <w>290</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>stored_payment
+--
+id: Long="36548",
+card_number: '6849 8514 9823 8457',
+card_type: 'Visa',
+card_expiration: '04/20',
+card_cvc: '789'
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>640</x>
+      <y>240</y>
+      <w>290</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>address
+--
+id: Long="36548",
+address_street: '3821 SE 7th Street',
+address_city: 'Des Moines',
+address_state: 'IA',
+address_zip: 50315
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>630</x>
+      <y>90</y>
+      <w>310</w>
+      <h>770</h>
+    </coordinates>
+    <panel_attributes>user
+--
+id: Long="36548",
+user_name: 'JoeFighter123',
+first_name: 'Joe',
+last_name: 'Rogan',
+email: 'Joe@example.com',
+password: 'UFCisTheBe$t',
+subscription_plan: 'Premium',
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
